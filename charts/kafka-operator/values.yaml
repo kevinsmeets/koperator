@@ -20,9 +20,9 @@ operator:
   # configurable Kubernetes namespaces.
   # In this scenario, users can replace the default
   # ClusterRole and ClusterRoleBinding to Role and RoleBinding respectively.
-  # When this field is not empty and Cert-manager is used, 
+  # When this field is not empty and Cert-manager is used,
   # the Cert-manager's Custom Resource Namespace must be included in the comma separated list.
-  # When it is empty, all namespaces will be watched. 
+  # When it is empty, all namespaces will be watched.
   namespaces: ""
   verboseLogging: false
   developmentLogging: false
@@ -66,8 +66,13 @@ prometheusMetrics:
   authProxy:
     enabled: true
     image:
-      repository: gcr.io/kubebuilder/kube-rbac-proxy
-      tag: v0.13.0
+      # https://github.com/banzaicloud/koperator/issues/1089
+      # repository: gcr.io/kubebuilder/kube-rbac-proxy
+      # tag: v0.13.0
+      #
+      # https://hub.docker.com/r/kubesphere/kube-rbac-proxy/tags?name=v0.13
+      repository: kubesphere/kube-rbac-proxy
+      tag: v0.13.1
       pullPolicy: IfNotPresent
     serviceAccount:
       create: true
