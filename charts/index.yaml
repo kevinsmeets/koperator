@@ -1,0 +1,15 @@
+apiVersion: v1
+entries:
+  kafka-operator:
+  - apiVersion: v1
+    appVersion: v0.25.1
+    created: "2024-12-16T16:50:25.919285437+01:00"
+    description: kafka-operator manages Kafka deployments on Kubernetes
+    digest: cc0d4698e8d7166032e47dc33a61bbdb696eb1b817ed570428fb543403c4d0a7
+    name: kafka-operator
+    sources:
+    - https://github.com/banzaicloud/koperator
+    urls:
+    - https://raw.githubusercontent.com/kevinsmeets/koperator/refs/heads/master/charts/kafka-operator-0.25.1.tgz
+    version: 0.25.1
+generated: "2024-12-16T16:50:25.912606219+01:00"
