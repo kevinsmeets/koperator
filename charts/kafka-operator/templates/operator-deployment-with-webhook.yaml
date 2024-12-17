@@ -138,6 +138,9 @@ spec:
         app.kubernetes.io/component: operator
         app: prometheus
         component: alertmanager
+      {{- with .Values.operator.labels }}
+        {{- toYaml . | nindent 4 }}
+      {{- end }}
     spec:
     {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
