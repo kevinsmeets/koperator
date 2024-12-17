@@ -10,6 +10,8 @@ imagePullSecrets: []
 
 operator:
   annotations: {}
+  labels:
+    product: mci-kafka-operator
   image:
     repository: ghcr.io/banzaicloud/kafka-operator
     tag: ""
